@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct MainTabView: View {
+	@State private var selectedTab = 0
     var body: some View {
 		TabView {
 			
-			Text("Feed")
+			FeedView()
 				.tabItem {
 					Image(systemName: "house")
 				}
+				.tag(0)
 			
-			Text("Search")
+			SearchView()
 				.tabItem {
 					Image(systemName: "magnifyingglass")
 				}
+				.tag(1)
 			
 			Text("UploadPost")
 				.tabItem {
