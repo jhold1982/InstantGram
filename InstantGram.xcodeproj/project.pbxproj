@@ -11,6 +11,13 @@
 		64293BBE2A12C5E5008CF36E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BBD2A12C5E5008CF36E /* FeedCell.swift */; };
 		64293BC02A13F886008CF36E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BBF2A13F886008CF36E /* SearchView.swift */; };
 		64293BC22A1411ED008CF36E /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BC12A1411ED008CF36E /* LogInView.swift */; };
+		64293BC42A1424B8008CF36E /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BC32A1424B8008CF36E /* AddEmailView.swift */; };
+		64293BC62A150ED7008CF36E /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BC52A150ED7008CF36E /* TextFieldModifier.swift */; };
+		64293BC82A151000008CF36E /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BC72A151000008CF36E /* CreateUsernameView.swift */; };
+		64293BCA2A1511CE008CF36E /* CustomButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BC92A1511CE008CF36E /* CustomButtonModifier.swift */; };
+		64293BCC2A1512C6008CF36E /* CustomHeaderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BCB2A1512C6008CF36E /* CustomHeaderText.swift */; };
+		64293BCE2A1527FD008CF36E /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BCD2A1527FD008CF36E /* CreatePasswordView.swift */; };
+		64293BD02A153550008CF36E /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64293BCF2A153550008CF36E /* CompleteSignUpView.swift */; };
 		64DA62492A0EBC9D00BE8E83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA62482A0EBC9D00BE8E83 /* MainTabView.swift */; };
 		64DA624B2A0EBD8B00BE8E83 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA624A2A0EBD8B00BE8E83 /* ProfileView.swift */; };
 		64DA624E2A0EC23100BE8E83 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA624D2A0EC23100BE8E83 /* UserStatView.swift */; };
@@ -25,6 +32,13 @@
 		64293BBD2A12C5E5008CF36E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		64293BBF2A13F886008CF36E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		64293BC12A1411ED008CF36E /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		64293BC32A1424B8008CF36E /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		64293BC52A150ED7008CF36E /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		64293BC72A151000008CF36E /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
+		64293BC92A1511CE008CF36E /* CustomButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonModifier.swift; sourceTree = "<group>"; };
+		64293BCB2A1512C6008CF36E /* CustomHeaderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderText.swift; sourceTree = "<group>"; };
+		64293BCD2A1527FD008CF36E /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		64293BCF2A153550008CF36E /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
 		64DA62482A0EBC9D00BE8E83 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		64DA624A2A0EBD8B00BE8E83 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		64DA624D2A0EC23100BE8E83 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
@@ -85,6 +99,10 @@
 		64DA62412A0EBC2000BE8E83 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				64293BC32A1424B8008CF36E /* AddEmailView.swift */,
+				64293BCF2A153550008CF36E /* CompleteSignUpView.swift */,
+				64293BCD2A1527FD008CF36E /* CreatePasswordView.swift */,
+				64293BC72A151000008CF36E /* CreateUsernameView.swift */,
 				64293BC12A1411ED008CF36E /* LogInView.swift */,
 			);
 			path = Authentication;
@@ -141,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				64DA624D2A0EC23100BE8E83 /* UserStatView.swift */,
+				64293BC52A150ED7008CF36E /* TextFieldModifier.swift */,
+				64293BC92A1511CE008CF36E /* CustomButtonModifier.swift */,
+				64293BCB2A1512C6008CF36E /* CustomHeaderText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -267,10 +288,17 @@
 				64DA624B2A0EBD8B00BE8E83 /* ProfileView.swift in Sources */,
 				64E40E4D2A0EA1A200CD610F /* ContentView.swift in Sources */,
 				64E40E4B2A0EA1A200CD610F /* InstantGramApp.swift in Sources */,
+				64293BCC2A1512C6008CF36E /* CustomHeaderText.swift in Sources */,
 				64293BC02A13F886008CF36E /* SearchView.swift in Sources */,
+				64293BC42A1424B8008CF36E /* AddEmailView.swift in Sources */,
+				64293BCA2A1511CE008CF36E /* CustomButtonModifier.swift in Sources */,
+				64293BC82A151000008CF36E /* CreateUsernameView.swift in Sources */,
 				64DA624E2A0EC23100BE8E83 /* UserStatView.swift in Sources */,
 				64293BC22A1411ED008CF36E /* LogInView.swift in Sources */,
 				64293BBC2A12C5DE008CF36E /* FeedView.swift in Sources */,
+				64293BCE2A1527FD008CF36E /* CreatePasswordView.swift in Sources */,
+				64293BD02A153550008CF36E /* CompleteSignUpView.swift in Sources */,
+				64293BC62A150ED7008CF36E /* TextFieldModifier.swift in Sources */,
 				64DA62492A0EBC9D00BE8E83 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

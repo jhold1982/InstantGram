@@ -22,21 +22,13 @@ struct LogInView: View {
 					
 				// Email PW Text Fields
 				VStack {
-					TextField("Enter your email", text: $email)
+					TextField("Email", text: $email)
 						.textInputAutocapitalization(.never)
-						.font(.subheadline)
-						.padding(12)
-						.background(Color(.systemGray6))
-						.cornerRadius(10)
-						.padding(.horizontal, 24)
+						.modifier(TextFieldModifier())
 					
 					SecureField("Password", text: $password)
 						.textInputAutocapitalization(.never)
-						.font(.subheadline)
-						.padding(12)
-						.background(Color(.systemGray6))
-						.cornerRadius(10)
-						.padding(.horizontal, 24)
+						.modifier(TextFieldModifier())
 				}
 				// Forgot Password Button
 				Button {
@@ -55,16 +47,11 @@ struct LogInView: View {
 					print("DEBUG: Login...")
 				} label: {
 					Text("Login")
-						.font(.subheadline)
-						.fontWeight(.semibold)
-						.frame(width: 360, height: 44)
-						.foregroundColor(.white)
-						.background(Color(.systemBlue))
-						.cornerRadius(8)
+						.modifier(CustomButtonModifier())
 				}
 				.padding(.vertical)
 				
-				// Custom OR Divider
+				// Custom "OR" Divider
 				HStack {
 					Rectangle()
 						.frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
@@ -76,6 +63,7 @@ struct LogInView: View {
 				}
 				.foregroundColor(.gray)
 				
+				// Continue with Facebook
 				HStack {
 					Image("Facebook")
 						.resizable()
@@ -86,10 +74,14 @@ struct LogInView: View {
 						.foregroundColor(Color(.systemBlue))
 				}
 				.padding(.top, 8)
+				
 				Spacer()
 				Divider()
+				
+				// Sign Up 
 				NavigationLink {
-					Text("Sign Up")
+					AddEmailView()
+						.navigationBarBackButtonHidden()
 				} label: {
 					HStack(spacing: 3) {
 						Text("Don't have an account?")
