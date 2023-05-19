@@ -11,8 +11,7 @@ import SwiftUI
 struct InstantGramApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-			LogInView()
+            ContentView()
         }
     }
 }

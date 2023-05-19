@@ -28,16 +28,19 @@ struct MainTabView: View {
 				.tabItem {
 					Image(systemName: "plus.square")
 				}
+				.tag(2)
 			
 			Text("Notifications")
 				.tabItem {
 					Image(systemName: "heart")
 				}
+				.tag(3)
 			
-			ProfileView()
+			CurrentUserProfileView(user: User.mockUsers[0])
 				.tabItem {
 					Image(systemName: "person")
 				}
+				.tag(4)
 		}
 		.accentColor(.black)
     }

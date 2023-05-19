@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct FeedCell: View {
+	let post: Post
     var body: some View {
 		VStack {
 			// Image + Username
 			HStack {
-				Image("TheGreatTurn")
-					.resizable()
-					.scaledToFill()
-					.frame(width: 40, height: 40)
-					.clipShape(Circle())
-				
-				Text("The Great Turn")
-					.font(.footnote)
-					.fontWeight(.semibold)
+				if let user = post.user {
+					Image(user.profileImageURL ?? "")
+						.resizable()
+						.scaledToFill()
+						.frame(width: 40, height: 40)
+						.clipShape(Circle())
+					
+					Text(user.username)
+						.font(.footnote)
+						.fontWeight(.semibold)
+				}
 				Spacer()
 			}
 			.padding(.leading, 8)
 			
 			// Post Image
-			Image("lateralus")
+			Image(post.imageURL)
 				.resizable()
 				.scaledToFill()
 				.frame(height: 400)
@@ -62,7 +65,7 @@ struct FeedCell: View {
 			.foregroundColor(.black)
 			
 			// Likes label
-			Text("23 Likes")
+			Text("\(post.likes) likes")
 				.font(.footnote)
 				.fontWeight(.semibold)
 				.frame(maxWidth: .infinity, alignment: .leading)
@@ -71,8 +74,8 @@ struct FeedCell: View {
 			
 			// Caption label
 			HStack {
-				Text("TheGreatTurn").fontWeight(.semibold) +
-				Text("This is a test caption")
+				Text("\(post.user?.username ?? "")").fontWeight(.semibold)
+				Text(post.caption)
 			}
 			.frame(maxWidth: .infinity, alignment: .leading)
 			.font(.footnote)
@@ -92,6 +95,6 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell()
+		FeedCell(post: Post.mockPosts[0])
     }
 }
