@@ -18,15 +18,13 @@ struct ProfileView: View {
     var body: some View {
 		ScrollView {
 			// MARK: Header
-			ProfileHeaderView(user: User.mockUsers[2])
+			ProfileHeaderView(user: user)
 			
 			// MARK: Post Grid
 			PostGridView(posts: posts)
 		}
 		.navigationTitle("Profile")
 		.navigationBarTitleDisplayMode(.inline)
-			
-
     }
 }
 
