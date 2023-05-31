@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CompleteSignUpView: View {
 	@Environment(\.dismiss) var dismiss
-	@State private var username: String = "UserName Person"
+	@EnvironmentObject var viewModel: RegistrationViewModel
     var body: some View {
 		VStack(spacing: 12) {
 			Spacer()
 			
-			Text("Welcome to InstantGram, \(username)")
+			Text("Welcome to InstantGram, \(viewModel.username)")
 				.multilineTextAlignment(.center)
 				.modifier(CustomHeaderText())
 			
@@ -24,7 +24,9 @@ struct CompleteSignUpView: View {
 			
 			// Registration Button
 			Button {
-				print("DEBUG: Sign Up Successful...")
+				Task {
+					try await viewModel.createUser()
+				}
 			} label: {
 				Text("Complete Sign Up")
 					.modifier(CustomButtonModifier())
@@ -57,5 +59,6 @@ struct CompleteSignUpView: View {
 struct CompleteSignUpView_Previews: PreviewProvider {
     static var previews: some View {
         CompleteSignUpView()
+			.environmentObject(RegistrationViewModel())
     }
 }

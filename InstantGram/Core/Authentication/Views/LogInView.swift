@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct LogInView: View {
-	@State private var email = ""
-	@State private var password = ""
+	@StateObject var viewModel = LoginViewModel()
     var body: some View {
 		NavigationStack {
 			VStack {
@@ -22,11 +21,11 @@ struct LogInView: View {
 					
 				// Email PW Text Fields
 				VStack {
-					TextField("Email", text: $email)
+					TextField("Email", text: $viewModel.email)
 						.textInputAutocapitalization(.never)
 						.modifier(TextFieldModifier())
 					
-					SecureField("Password", text: $password)
+					SecureField("Password", text: $viewModel.password)
 						.textInputAutocapitalization(.never)
 						.modifier(TextFieldModifier())
 				}
@@ -40,11 +39,16 @@ struct LogInView: View {
 						.padding(.top)
 						.padding(.trailing, 28)
 				}
-				.frame(maxWidth: .infinity, alignment: .trailing)
+				.frame(
+					maxWidth: .infinity,
+					alignment: .trailing
+				)
 				
 				// Login Button
 				Button {
-					print("DEBUG: Login...")
+					Task {
+						try await viewModel.signIn()
+					}
 				} label: {
 					Text("Login")
 						.modifier(CustomButtonModifier())
@@ -54,12 +58,18 @@ struct LogInView: View {
 				// Custom "OR" Divider
 				HStack {
 					Rectangle()
-						.frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
+						.frame(
+							width: (UIScreen.main.bounds.width / 2) - 40,
+							height: 0.5
+						)
 					Text("OR")
 						.font(.footnote)
 						.fontWeight(.semibold)
 					Rectangle()
-						.frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
+						.frame(
+							width: (UIScreen.main.bounds.width / 2) - 40,
+							height: 0.5
+						)
 				}
 				.foregroundColor(.gray)
 				

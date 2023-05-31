@@ -32,6 +32,8 @@
 		64C3F0A02A1FE14500EE289C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 64C3F09F2A1FE14500EE289C /* FirebaseStorage */; };
 		64C3F0A42A1FE32500EE289C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C3F0A32A1FE32500EE289C /* AuthService.swift */; };
 		64C3F0A72A1FE79A00EE289C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C3F0A62A1FE79A00EE289C /* ContentViewModel.swift */; };
+		64C3F0AA2A262EF200EE289C /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C3F0A92A262EF200EE289C /* RegistrationViewModel.swift */; };
+		64C3F0AC2A27B39E00EE289C /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C3F0AB2A27B39E00EE289C /* LogInViewModel.swift */; };
 		64DA62492A0EBC9D00BE8E83 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA62482A0EBC9D00BE8E83 /* MainTabView.swift */; };
 		64DA624B2A0EBD8B00BE8E83 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA624A2A0EBD8B00BE8E83 /* ProfileView.swift */; };
 		64DA624E2A0EC23100BE8E83 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA624D2A0EC23100BE8E83 /* UserStatView.swift */; };
@@ -63,6 +65,8 @@
 		64C3F0962A1FE08600EE289C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64C3F0A32A1FE32500EE289C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		64C3F0A62A1FE79A00EE289C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		64C3F0A92A262EF200EE289C /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		64C3F0AB2A27B39E00EE289C /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		64DA62482A0EBC9D00BE8E83 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		64DA624A2A0EBD8B00BE8E83 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		64DA624D2A0EC23100BE8E83 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		64C3F0A82A262EE400EE289C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				64C3F0A92A262EF200EE289C /* RegistrationViewModel.swift */,
+				64C3F0AB2A27B39E00EE289C /* LogInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		64DA623D2A0EB85300BE8E83 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				64C3F0A22A1FE30800EE289C /* Service */,
+				64C3F0A82A262EE400EE289C /* ViewModel */,
 				64C3F0A12A1FE2F500EE289C /* Views */,
 			);
 			path = Authentication;
@@ -365,9 +379,11 @@
 				64BC2FA72A180EE400E4A42E /* ProfileHeaderView.swift in Sources */,
 				64293BCC2A1512C6008CF36E /* CustomHeaderText.swift in Sources */,
 				64293BC02A13F886008CF36E /* SearchView.swift in Sources */,
+				64C3F0AA2A262EF200EE289C /* RegistrationViewModel.swift in Sources */,
 				64C3F0A72A1FE79A00EE289C /* ContentViewModel.swift in Sources */,
 				64293BC42A1424B8008CF36E /* AddEmailView.swift in Sources */,
 				64293BD22A1576DB008CF36E /* User.swift in Sources */,
+				64C3F0AC2A27B39E00EE289C /* LogInViewModel.swift in Sources */,
 				64BC2FA52A1805B500E4A42E /* PostGridView.swift in Sources */,
 				64293BCA2A1511CE008CF36E /* CustomButtonModifier.swift in Sources */,
 				64293BC82A151000008CF36E /* CreateUsernameView.swift in Sources */,

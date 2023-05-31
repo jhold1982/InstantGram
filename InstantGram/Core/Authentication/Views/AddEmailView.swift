@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AddEmailView: View {
+	@EnvironmentObject var viewModel: RegistrationViewModel
 	@Environment(\.dismiss) var dismiss
-	@State private var email = ""
     var body: some View {
 		VStack(spacing: 12) {
 			Text("Add your email")
@@ -18,7 +18,7 @@ struct AddEmailView: View {
 			Text("You'll use this email to sign into your account")
 				.modifier(CustomSubheaderText())
 			
-			TextField("Email", text: $email)
+			TextField("Email", text: $viewModel.email)
 				.textInputAutocapitalization(.never)
 				.modifier(TextFieldModifier())
 				.padding(.top)

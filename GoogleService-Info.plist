@@ -13,21 +13,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.leftHandedApps.InstantGram</string>
+	<string>com.lefthandedapps.InstantGram</string>
 	<key>PROJECT_ID</key>
 	<string>instantgram-8b318</string>
 	<key>STORAGE_BUCKET</key>
 	<string>instantgram-8b318.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:290513061665:ios:5eceac1b9b2c5a4c332060</string>
 </dict>
