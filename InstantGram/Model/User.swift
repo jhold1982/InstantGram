@@ -28,7 +28,7 @@ extension User {
 		.init(
 			id: NSUUID().uuidString,
 			username: "SeanHoward",
-			profileImageURL: "death",
+			profileImageURL: nil,
 			fullname: "Sean Howard",
 			bio: "I used to have a Tesla.",
 			email: "sean.howard@onepeloton.com"
@@ -37,7 +37,7 @@ extension User {
 		.init(
 			id: NSUUID().uuidString,
 			username: "JasonYouvert",
-			profileImageURL: "TheGreatTurn",
+			profileImageURL: nil,
 			fullname: "Jason Youvert",
 			bio: "I drive a Tesla and have lots of shoes.",
 			email: "jason.youvert@onepeloton.com"
@@ -46,7 +46,7 @@ extension User {
 		.init(
 			id: NSUUID().uuidString,
 			username: "Maxwell",
-			profileImageURL: "lateralus",
+			profileImageURL: nil,
 			fullname: "Maxwell Ebneter",
 			bio: "I have all the guns and a truck.",
 			email: "maxwell.ebneter@onepeloton.com"
@@ -55,7 +55,7 @@ extension User {
 		.init(
 			id: NSUUID().uuidString,
 			username: "MattAhrenstein",
-			profileImageURL: "heptagram",
+			profileImageURL: nil,
 			fullname: "Matthew Ahrenstein",
 			bio: "I have more guns than Max.",
 			email: "matt@ahrenstein.com"

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedCell: View {
 	let post: Post
@@ -14,11 +15,10 @@ struct FeedCell: View {
 			// Image + Username
 			HStack {
 				if let user = post.user {
-					Image(user.profileImageURL ?? "")
-						.resizable()
-						.scaledToFill()
-						.frame(width: 40, height: 40)
-						.clipShape(Circle())
+					CircularProfileImageView(
+						user: user,
+						size: .xSmall
+					)
 					
 					Text(user.username)
 						.font(.footnote)
@@ -29,7 +29,7 @@ struct FeedCell: View {
 			.padding(.leading, 8)
 			
 			// Post Image
-			Image(post.imageURL)
+			KFImage(URL(string: post.imageURL))
 				.resizable()
 				.scaledToFill()
 				.frame(height: 400)
@@ -95,6 +95,6 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-		FeedCell(post: Post.mockPosts[0])
+		FeedCell(post: Post.mockPosts[1])
     }
 }

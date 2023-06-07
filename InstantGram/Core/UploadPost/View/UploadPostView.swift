@@ -9,6 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct UploadPostView: View {
+	@Environment(\.dismiss) var dismiss
 	@State private var caption = ""
 	@State private var imagePickerPresented = false
 	@State private var photoItem: PhotosPickerItem?
@@ -19,10 +20,7 @@ struct UploadPostView: View {
 			// MARK: Action Toolbar
 			HStack {
 				Button {
-					caption = ""
-					viewModel.selectedImage = nil
-					viewModel.postImage = nil
-					tabIndex = 0
+					clearPostDataReturnToFeed()
 				} label: {
 					Text("Cancel")
 				}
@@ -31,7 +29,10 @@ struct UploadPostView: View {
 					.fontWeight(.semibold)
 				Spacer()
 				Button {
-					print("DEBUG: Upload Post...")
+					Task {
+						try await viewModel.uploadPost(caption: caption)
+						clearPostDataReturnToFeed()
+					}
 				} label: {
 					Text("Upload")
 						.fontWeight(.semibold)
@@ -57,6 +58,12 @@ struct UploadPostView: View {
 			imagePickerPresented.toggle()
 		}
     }
+	func clearPostDataReturnToFeed() {
+		caption = ""
+		viewModel.selectedImage = nil
+		viewModel.postImage = nil
+		tabIndex = 0
+	}
 }
 
 struct UploadPostView_Previews: PreviewProvider {

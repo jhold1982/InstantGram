@@ -12,7 +12,9 @@ struct EditProfileView: View {
 	@Environment(\.dismiss) var dismiss
 	@StateObject var viewModel: EditProfileViewModel
 	init(user: User) {
-		self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+		self._viewModel = StateObject(
+			wrappedValue: EditProfileViewModel(user: user)
+		)
 	}
     var body: some View {
 		VStack {
@@ -52,12 +54,7 @@ struct EditProfileView: View {
 							.clipShape(Circle())
 							.frame(width: 80, height: 80)
 					} else {
-						Image(systemName: "questionmark.circle")
-							.resizable()
-							.foregroundColor(.white)
-							.background(.gray)
-							.clipShape(Circle())
-							.frame(width: 80, height: 80)
+						CircularProfileImageView(user: viewModel.user, size: .large)
 					}
 					Text("Edit Profile Picture")
 						.font(.footnote)
